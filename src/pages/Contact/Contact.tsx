@@ -6,7 +6,7 @@ import emailjs from '@emailjs/browser';
 
 const Contact = () => {
   const [letterClass, setLetterClass] = useState('text-animate');
-  const nameArray = [...'Contact me'];
+  const nameArray = [...'CONTACT US'];
 
   useEffect(() => {
     setTimeout(() => {
@@ -44,11 +44,7 @@ const Contact = () => {
         <h1 className='about__headingPrimary'>
           <AnimatedLetters letterClass={letterClass} strArray={nameArray} idx={15} />
         </h1>
-        <p className='contact__description'>
-          I am interested in freelance opportunities - especially on ambitious
-          or large projects. However, if you have any other requests or
-          questions, don&apos;t hesitate to contact me using below form either.
-        </p>
+        
         <div className='form'>
           <form ref={form} onSubmit={sendEmail}>
             <div className='form__group'>
