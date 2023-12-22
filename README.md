@@ -8,7 +8,7 @@
 
 ## About The Project
 
-Hello! My name is Kesgav and this is my college society website .I’m a Front-End Developer located in India and i have a serious passion for UI effects, animations and creating intuitive, dynamic user experiences.
+Hello! My name is Keshav and this is my college society website .I’m a Front-End Developer located in India and i have a serious passion for UI effects, animations and creating intuitive, dynamic user experiences.
 
 
 # Portfolio
