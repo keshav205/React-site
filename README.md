@@ -1,35 +1,15 @@
 <div id="top"></div>
 
 <br />
-<div align="center">
-  <p align="center">
-    <b>Yash Falke - portfolio</b>
-    <br />
-    <!-- <a href="https://arcane-retreat-14101.herokuapp.com/">View Demo</a> -->
-    <!-- · -->
-    <a href="https://github.com/yashfalke77/portfolio/issues">Report Bug</a>
-    ·
-    <a href="https://github.com/yashfalke77/portfolio/issues">Request Feature</a>
-  </p>
+<div align="center"
 </div>
 
 <!-- ABOUT THE PROJECT -->
 
 ## About The Project
 
-Hello! My name is Yash Falke and this is my portfolio .I’m a Front-End Developer located in India and i have a serious passion for UI effects, animations and creating intuitive, dynamic user experiences.
+Hello! My name is Kesgav and this is my college society website .I’m a Front-End Developer located in India and i have a serious passion for UI effects, animations and creating intuitive, dynamic user experiences.
 
-### Project Images
-
-#### Home Page
-
-<img src="./project screenshots/2.png" alt="Logo" >
-
-#### contact page
-
-<img src="./project screenshots/1.png" alt="Logo" >
-
-<p align="right">(<a href="#top">back to top</a>)</p>
 
 # Portfolio
 
