@@ -1,0 +1,259 @@
+@import "../../scss/mixins";
+
+@keyframes spincube {
+
+    from,
+    to {
+        transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+    }
+
+    16% {
+        transform: rotateY(-90deg);
+    }
+
+    33% {
+        transform: rotateY(-90deg) rotateZ(90deg);
+    }
+
+    50% {
+        transform: rotateY(-180deg) rotateZ(90deg);
+    }
+
+    66% {
+        transform: rotateY(-270deg) rotateZ(90deg);
+    }
+
+    83% {
+        transform: rotateX(90deg);
+    }
+}
+
+.about {
+    padding: 5rem 3rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    min-height: 56.6rem;
+    animation: fadeIn 1s forwards;
+
+    @include respond(tab-port) {
+        flex-direction: column;
+    }
+
+    &__left {
+        flex: 0 0 60%;
+
+        @include respond(tab-port) {
+            flex: 0 0 100%;
+        }
+    }
+
+    &__right {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+
+        @include respond(tab-port) {
+            flex: 0 0 100%;
+        }
+    }
+
+    &__description {
+        color: var(--slate);
+
+        &::before {
+            content: "<p>";
+            font-size: 1.8rem;
+            display: block;
+            font-family: 'La Belle Aurore', cursive;
+            color: #ffd700;
+            opacity: 0.7;
+            font-weight: 500;
+        }
+
+        &::after {
+            content: "</p>";
+            font-size: 1.8rem;
+            font-family: 'La Belle Aurore', cursive;
+            color: #ffd700;
+            opacity: 0.7;
+            display: block;
+            font-weight: 500;
+        }
+    }
+
+    
+
+    &__headingPrimary {
+        font-size: 4.5rem;
+        font-weight: 800;
+        line-height: 1;
+        letter-spacing: -0.03em;
+        margin-bottom: 1.6rem;
+        color: var(--lightest-slate);
+
+        &::before {
+            content: "<h1>";
+            font-size: 1.8rem;
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            color: #ffd700;
+            opacity: 0.7;
+            font-weight: 500;
+            display: block;
+        }
+
+        &::after {
+            content: "</h1>";
+            font-size: 1.8rem;
+            font-family: 'La Belle Aurore', cursive;
+            color: #ffd700;
+            opacity: 0.7;
+            font-weight: 500;
+            animation: fadeIn 1s 1.7s backwards;
+            display: block;
+        }
+    }
+
+    &__link {
+
+        &,
+        &:link,
+        &:visited {
+            text-decoration: none;
+            text-decoration-skip-ink: auto;
+            color: var(--primary);
+            font-size: inherit;
+            transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+            position: relative;
+            cursor: pointer;
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            transform: scaleX(0);
+            height: 1px;
+            bottom: 0;
+            left: 0;
+            background-color: var(--primary);
+            transform-origin: bottom right;
+            transition: transform 0.25s ease-out;
+        }
+
+        &:hover:after {
+            transform: scaleX(1);
+            transform-origin: bottom left;
+        }
+    }
+
+    
+}
+
+.stage-cube-cont {
+    margin-bottom: 28rem;
+
+    @include respond(tab-port) {
+        margin-top: 6rem;
+    }
+
+}
+
+.cubespinner {
+    animation-name: spincube;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-duration: 12s;
+    transform-style: preserve-3d;
+    transform-origin: 10rem 10rem 0;
+    margin-left: calc(50% - 10rem);
+
+    @include respond(tab-port) {
+        margin-left: calc(50% - 15rem);
+    }
+
+    @include respond(phone) {
+        margin-left: calc(50% - 12rem);
+    }
+
+
+    @keyframes spincube {
+
+        from,
+        to {
+            transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+        }
+
+        16% {
+            transform: rotateY(-90deg) rotateZ(90deg);
+        }
+
+        33% {
+            transform: rotateY(-90deg) rotateX(90deg);
+        }
+
+        50% {
+            transform: rotateY(-180deg) rotateZ(90deg);
+        }
+
+        66% {
+            transform: rotateY(-270deg) rotateX(90deg);
+        }
+
+        83% {
+            transform: rotateX(90deg);
+        }
+    }
+
+
+    div {
+        position: absolute;
+        width: 200px;
+        height: 200px;
+        border: 1px solid #ccc;
+        background: rgba(255, 255, 255, 0.371);
+        text-align: center;
+        font-size: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0 0 20px 0px lightyellow;
+    }
+
+    .face1 {
+        transform: translateZ(100px);
+        // color: #dd0031;
+        background-image: url(1.jpeg);
+        background-size: cover;
+    }
+
+    .face2 {
+        transform: rotateY(90deg) translateZ(100px);
+        background-image: url(2.jpeg);
+        background-size: cover;
+    }
+
+    .face3 {
+        transform: rotateY(90deg) rotateX(90deg) translateZ(100px);
+        background-image: url(3.jpeg);
+        background-size: cover;
+    }
+
+    .face4 {
+        transform: rotateY(180deg) rotateZ(90deg) translateZ(100px);
+        background-image: url(4.jpeg);
+        background-size: cover;
+    }
+
+    .face5 {
+        transform: rotateY(-90deg) rotateZ(90deg) translateZ(100px);
+        background-image: url(5.jpeg);
+        background-size: cover;
+    }
+
+    .face6 {
+        transform: rotateX(-90deg) translateZ(100px);
+        background-image: url(6.jpeg);
+        background-size: cover;
+    }
+}
